@@ -12,7 +12,7 @@ const Main = () => {
 		<div class="home">
 			<Row>
 				<Col>
-					<h3>Squeex Stream Highlights</h3>
+					<h3>Check out my stream highlights!</h3>
 				</Col>				
 			</Row>
 			<Row>

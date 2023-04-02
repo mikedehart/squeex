@@ -86,13 +86,15 @@ code {
 /***** Primary Container *****/
 .maincontainer {
   margin-top: 5px;
-  background:  #F4F3F4 url(../img/sm2_world.jpg) repeat left top;
+  /*background:  #F4F3F4 url(../img/sm2_world.jpg) repeat left top; */
+  background: #F4F3F4 url(../img/mushroom_bg.jpg) no-repeat right bottom;
   text-align: center;
   border-radius: 25px;
-  color: #C2352D;
+  color: #F4F3F4;
 }
   .maincontainer h2 {
     padding-top:  10px;
+    color: ;
   }
 
   .maincontainer .col a {
@@ -132,7 +134,7 @@ code {
   padding-bottom: 25px;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
-  background: #F4F3F4 url(../img/mushroom_bg.jpg) no-repeat right bottom;
+  /*background: #F4F3F4 url(../img/mushroom_bg.jpg) no-repeat right bottom;*/
 }
   .home h3 {
     margin-top: 20px;
@@ -144,10 +146,17 @@ code {
   /***** Name Container *****/
 
   .name_cnt {
+    padding: 15px 15px;
     background-color: #19171C;
   }
 
+  .name_cnt .row {
+    padding: 10px 5px;
+  }
+
   .name_col1 {
-    border: 1px solid black;
+    font:  1.2em "Arial", sans-serif;
+    border: 1px solid #F4F3F4;
     border-radius: 20px;
+    margin-left: 25px;
   }
