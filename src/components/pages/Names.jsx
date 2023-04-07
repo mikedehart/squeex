@@ -7,11 +7,10 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 /* Images/assets */
-import handle from '../../img/squeex_handle.png';
 import ladies from '../../img/ladies.png';
 
 /* Misc */
-import messages from '../../scripts/messages.json';
+let messages = require('../../data/messages');
 
 
 
@@ -19,7 +18,7 @@ class Names extends Component {
 	constructor(props) {
 		super(props);
 
-		const uName = React.createRef();
+		this.uName = React.createRef();
 
 		this.handleMessage = this.handleMessage.bind(this);
 
@@ -34,11 +33,12 @@ class Names extends Component {
 
 	handleMessage() {
 		let user = this.uName.current.value;
-		let rNum = Math.floor(Math.random() * 5);
-		let msgs = JSON.parse(messages);
-		let msg = msgs[rNum];
+		console.log(messages.length);
+		let rNum = Math.floor(Math.random() * 9);
+		let msg = messages[rNum];
+		let x = msg.replace('NAME', user);
 		this.setState({
-			message: msg
+			message: x
 		});
 	}
 
@@ -49,15 +49,16 @@ class Names extends Component {
 				<h2>Squeex says your name!</h2>
 				<Row className="name_row">
 					<Col className="name_col1">
-						<p><span><img src={handle} alt="Squeex: "/></span> {this.state.message}</p></Col>
-						}
+						<div className="right-point"></div>
+						<p>{this.state.message}</p>
+					</Col>
 					<Col className="name_col2">
 						<img src={ladies} alt="HOO LEEE" />
 					</Col>
 				</Row>
 				<Row className="name_input_row">
 					<Col className="name_input">
-						<input ref={this.uName} placeholder="squeexcel38" /> <Button onClick={this.handleMessage} variant="danger">Squeex Me!</Button>
+						Name: <input ref={this.uName} placeholder="squeexcel38" /> <Button onClick={this.handleMessage} variant="danger">Squeex Me!</Button>
 					</Col>
 				</Row>
 

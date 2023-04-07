@@ -4,6 +4,7 @@
 }
 
 body {
+  cursor: url(../img/squeexGoomba.png) auto;
   background: #F4F3F4 url(../img/redsplits_bg.png) repeat left top;
   margin: 0;
   font-family: 'tfMario', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -43,6 +44,7 @@ code {
     margin-left:  20px;
     font: 2em "tfMario", sans-serif;
     padding:  20px 0;
+    text-shadow: #19171C 2px 2px 5px;
   }
 
   .header h6 {
@@ -72,12 +74,22 @@ code {
 .navbar .sq-nav {
   margin: 0 5px;
   padding-top: 10px;
-  background: #F4F3F4 url(../img/8_bit_bricks_bg.png) no-repeat center;
+  background-color: #C2352D;
+  border: 1px solid #701E1A;
 }
 
+  .navbar .sq-nav:hover {
+    background-color: #701E1A;
+  }
+
 .navbar .sq-nav-img {
-  background: #F4F3F4 url(../img/8_bit_bricks_bg.png) no-repeat center;
+  background-color: #C2352D;
+  border: 1px solid #701E1A;
 }
+
+  .navbar .sq-nav-img:hover {
+    background-color: #701E1A;
+  }
 
 .navbar h6 {
   margin-right: 20px;
@@ -89,12 +101,13 @@ code {
   /*background:  #F4F3F4 url(../img/sm2_world.jpg) repeat left top; */
   background: #F4F3F4 url(../img/mushroom_bg.jpg) no-repeat right bottom;
   text-align: center;
-  border-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   color: #F4F3F4;
 }
   .maincontainer h2 {
     padding-top:  10px;
-    color: ;
+    text-shadow: #19171C 2px 2px 5px;
   }
 
   .maincontainer .col a {
@@ -130,10 +143,7 @@ code {
 
 .home {
   margin-top: 25px;
-  margin-bottom:  25px;
   padding-bottom: 25px;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
   /*background: #F4F3F4 url(../img/mushroom_bg.jpg) no-repeat right bottom;*/
 }
   .home h3 {
@@ -155,8 +165,123 @@ code {
   }
 
   .name_col1 {
-    font:  1.2em "Arial", sans-serif;
-    border: 1px solid #F4F3F4;
-    border-radius: 20px;
+    color: #19171C;
+    font: 2em "Calibri", sans-serif;
+    border-radius: 50px;
     margin-left: 25px;
+    background-color: #F4F3F4;
+  }
+    .name_col1 p {
+      padding: 2px 2px;
+      padding-right: 15px;
+      font-weight: bold;
+    }
+
+  .name_input_row input {
+    font:  1.2em "Calibri", sans-serif;
+  }
+
+  /* Speech CSS */
+
+  .right-point {
+    width: 0;
+    height: 0;
+    border-left: 4vh solid transparent;
+    border-right: 4vh solid transparent;
+    border-top: 20vh solid #F4F3F4;
+    position: relative;
+    top: 20%;
+    left: 100%;
+    transform: rotate(-60deg);
+  }
+
+  /* KKona Page  */
+
+  .kkona_cont {
+    background: #F4F3F4 url(../img/the_don2.png) no-repeat center top;
+    width: auto;
+    min-height: 900px;
+  }
+
+    .kkona_cont h4 {
+      padding-top: 300px;
+      text-shadow:  #19171C 2px 2px 5px;
+    }
+
+
+    /* FAQs Page */
+
+.faqs_cnt {
+  background: #F4F3F4 url(../img/sm2_world.jpg) repeat right bottom;
+  text-align: center;
+}
+
+  .faqs_cnt h2 {
+    text-shadow: #19171C 2px 2px 5px;
+  }
+
+
+.acc_cnt {
+  font:  1.2em "Calibri", sans-serif;
+  padding: 0 auto;
+  margin-bottom: 25px;
+
+}
+  .acc_header button {
+    color: #F4F3F4;
+    font-size: 0.75em;
+    text-align: center;
+    background-color: #08469E;
+    font-family: 'tfMario', sans-serif;
+    text-shadow: #19171C 2px 2px 5px;
+  }
+
+  /* Draw Page */
+
+.draw_cnt {
+  background: #C2352D url(../img/sm_world.jpg) no-repeat top left;
+}
+  .draw_cnt h2 {
+    color: #F4F3F4;
+    padding-bottom: 10px;
+  }
+
+  .clear_btn {
+    margin-bottom: 5px;
+  }
+
+  .draw_cnvs {
+      /* background: white url('../img/bald1.png') no-repeat left bottom; */
+      margin: 5px auto;
+      background-color:  white;
+    }
+
+
+/***** Footer info *****/
+
+.footer {
+  text-align: center;
+  color: white;
+  background: #F4F3F4 url(../img/mushroom_bg.jpg) no-repeat right bottom;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding-top: 10px;
+  font:  1.2em "Calibri", sans-serif;
+}
+
+.testimonial p {
+  background-color:  #19171C;
+  margin: 0 25px;
+}
+
+.goombas {
+  padding-bottom:  10px;
+}
+
+.signature {
+  padding: 10px 5px;
+}
+  .signature img {
+    margin: 0 5px;
+    padding-bottom: 5px;
   }

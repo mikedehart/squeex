@@ -1,16 +1,38 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 
-import sheldance from '../../img/sheldon_dance.gif';
+import america from '../../sounds/us_anthem.mp3';
 
 
+class KKona extends Component {
+	constructor(props) {
+		super(props);
+	}
 
-const KKona = () => {
-	return(
-		<h1>Hello World!</h1>
-	);
+  	componentDidMount() {
+		this.props.musicOn();
+	}
+
+	componentWillUnmount() {
+		this.props.musicOff();
+	}
+
+	render() {
+		return(
+			<Container className="kkona_cont">
+				<h4>Standing back and standing by...</h4>
+			</Container>
+		);
+	}
 }
+
+KKona.propTypes = {
+	musicOn: PropTypes.func,
+	musicOff: PropTypes.func
+};
+
 
 export default KKona;

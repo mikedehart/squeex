@@ -27,12 +27,13 @@ class TopNav extends Component {
 				<Navbar.Brand href="#home"></Navbar.Brand>
 				<Nav className="me-auto">
 					<Button className="sq-nav" onClick={this.props.handleMain} onMouseEnter={start}>Home</Button>
-					<Button className="sq-nav" onClick={this.props.handleNames} onMouseEnter={start}>Names</Button>
-					<Button className="sq-nav" onClick={this.props.handleDraw} onMouseEnter={start}>Art</Button>
+					<Button className="sq-nav" onClick={this.props.handleNames} onMouseEnter={start}>Say Name</Button>
+					<Button className="sq-nav" onClick={this.props.handleDraw} onMouseEnter={start}>Drawing</Button>
 					<Button className="sq-nav" onClick={this.props.handleFAQs} onMouseEnter={start}>FAQs</Button>
 					<Button className="sq-nav-img" onClick={this.props.handleKKona} onMouseEnter={start}><img src={kkona} height="50px" width="50px" /></Button>
 				</Nav>
 				<h6>Hi chat! <img src={sheldon} height="50px" width="50px" /></h6>
+				<Button onClick={this.props.audioToggle}>{this.props.audioOn ? 'Pause' : 'Play'}</Button>
 			</Navbar>
 		);
 	}
@@ -43,7 +44,9 @@ TopNav.propTypes = {
 	handleKKona: PropTypes.func,
 	handleFAQs: PropTypes.func,
 	handleNames: PropTypes.func,
-	handleDraw: PropTypes.func
+	handleDraw: PropTypes.func,
+	audioToggle: PropTypes.func,
+	audioOn: PropTypes.bool
 };
 
 export default TopNav;

@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+/* Bootstrap Objs */
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+/* Cusom Objs */
 import TopNav from './TopNav';
 import MainContainer from './MainContainer';
 import Header from './Header';
+import Footer from './Footer';
 
+/* Assets */
 import squeexsturdy from '../img/squeexsturdy.gif';
+import america from '../sounds/us_anthem.mp3';
+import smb from '../sounds/smbros.mp3';
+
 
 
 class AppContainer extends Component {
@@ -18,14 +25,57 @@ class AppContainer extends Component {
 
 
 		this.state = {
-			current_page: 'Main'
+			current_page: 'Main',
+			play: false
 		};
 
 	}
 
+	audio = new Audio(smb);
+
 	changePage(page) {
 		this.setState({
 			current_page: page
+		});
+	}
+
+	componentDidMount() {
+		this.audio.addEventListener('ended', () => this.setState({ play: false }));
+	}
+	  
+	componentWillUnmount() {
+		this.audio.removeEventListener('ended', () => this.setState({ play: false }));  
+	}
+
+	musicOff = () => {
+		if(this.state.play) {
+			this.setState({
+				play: false
+			});
+			this.audio.pause();
+		}
+	}
+
+	musicOn = () => {
+		if(!this.state.play) {
+			this.setState({
+				play: true
+			});
+			this.audio.play();
+		}
+	}
+
+	changeAudio = (sound) => {
+		this.setState({
+			play: false
+		});
+		this.audio.pause();
+		this.audio = new Audio(sound);
+	}
+
+	togglePlay = () => {
+		this.setState({ play: !this.state.play }, () => {
+		  this.state.play ? this.audio.play() : this.audio.pause();
 		});
 	}
 
@@ -39,6 +89,7 @@ class AppContainer extends Component {
 
 	handleKKona = () => {
 		this.setState({ current_page: 'KKona' });
+		this.changeAudio(america);
 	};
 
 	handleFAQs = () => {
@@ -47,6 +98,7 @@ class AppContainer extends Component {
 
 	handleDraw = () => {
 		this.setState({ current_page: 'Draw' });
+		this.changeAudio(smb);
 	};
 
 	render() {
@@ -57,8 +109,14 @@ class AppContainer extends Component {
 						handleMain={this.handleMain}
 						handleFAQs={this.handleFAQs}
 						handleDraw={this.handleDraw}
-						handleNames={this.handleNames} />
-				<MainContainer current_page={this.state.current_page}/>
+						handleNames={this.handleNames} 
+						audioToggle={this.togglePlay} 
+						audioOn={this.state.play} />
+				<MainContainer 
+						current_page={this.state.current_page} 
+						musicOn={this.musicOn}
+						musicOff={this.musicOff} />
+				<Footer />
 			</Container>
 		);
 	}

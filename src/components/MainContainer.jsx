@@ -55,15 +55,15 @@ class MainContainer extends Component {
 				</Row>
 				<Row>
 					<Col><img className="sq-minion" src={minion} alt="minion dancin" /></Col>
-					<Col><img className="sq-joel" src={joel} height="70px" width="125px" alt="joel dancin" /></Col>
+					<Col><img className="sq-joel" src={joel} height="70%" width="70%" alt="joel dancin" /></Col>
 					<Col><img className="sq-minion" src={minion} alt="minion dancin" /></Col>
-					<Col><img className="sq-joel" src={joel} height="70px" width="125px" alt="joel dancin" /></Col>
+					<Col><img className="sq-joel" src={joel} height="70%" width="70%" alt="joel dancin" /></Col>
 					<Col><img className="sq-minion" src={minion} alt="minion dancin" /></Col>
 				</Row>
 				{this.state.current_page === 'Main' ? <Main /> : null}
-				{this.state.current_page === 'KKona' ? <KKona /> : null}
+				{this.state.current_page === 'KKona' ? <KKona musicOn={this.props.musicOn} musicOff={this.props.musicOff} /> : null}
 				{this.state.current_page === 'FAQs' ? <FAQs /> : null}
-				{this.state.current_page === 'Draw' ? <Draw /> : null}
+				{this.state.current_page === 'Draw' ? <Draw musicOn={this.props.musicOn} musicOff={this.props.musicOff} /> : null}
 				{this.state.current_page === 'Names' ? <Names /> : null}
 			</div>
 		);
@@ -71,7 +71,9 @@ class MainContainer extends Component {
 }
 
 MainContainer.propTypes = {
-	current_page: PropTypes.string
+	current_page: PropTypes.string,
+	musicOn: PropTypes.func,
+	musicOff: PropTypes.func
 };
 
 export default MainContainer;
