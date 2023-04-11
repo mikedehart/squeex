@@ -3,6 +3,11 @@
   src:  local('tfMario'), url(../font/tf_mario.otf) format('opentype');
 }
 
+@font-face {
+  font-family:  'marioPixel';
+  src:  local('marioPixel'), url(../font/mario_pixel.ttf) format('truetype');
+}
+
 body {
   cursor: url(../img/squeexGoomba.png) auto;
   background: #F4F3F4 url(../img/redsplits_bg.png) repeat left top;
@@ -42,7 +47,7 @@ code {
 
   .header h1 {
     margin-left:  20px;
-    font: 2em "tfMario", sans-serif;
+    font: 2em "marioPixel", "tfMario", sans-serif;
     padding:  20px 0;
     text-shadow: #19171C 2px 2px 5px;
   }
