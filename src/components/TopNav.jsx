@@ -17,9 +17,6 @@ const start = () => {
 }
 
 class TopNav extends Component {
-	constructor(props) {
-		super(props);
-	}
 	
 	render(){
 		return(
@@ -30,9 +27,9 @@ class TopNav extends Component {
 					<Button className="sq-nav" onClick={this.props.handleNames} onMouseEnter={start}>Say Name</Button>
 					<Button className="sq-nav" onClick={this.props.handleDraw} onMouseEnter={start}>Drawing</Button>
 					<Button className="sq-nav" onClick={this.props.handleFAQs} onMouseEnter={start}>FAQs</Button>
-					<Button className="sq-nav-img" onClick={this.props.handleKKona} onMouseEnter={start}><img src={kkona} height="50px" width="50px" /></Button>
+					<Button className="sq-nav-img" onClick={this.props.handleKKona} onMouseEnter={start}><img src={kkona} alt="kkona" height="50px" width="50px" /></Button>
 				</Nav>
-				<h6>Hi chat! <img src={sheldon} height="50px" width="50px" /></h6>
+				<h6>Hi chat! <img src={sheldon} alt="sheldor" height="50px" width="50px" /></h6>
 				<Button onClick={this.props.audioToggle}>{this.props.audioOn ? 'Pause' : 'Play'}</Button>
 			</Navbar>
 		);

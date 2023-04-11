@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import sheldance from '../../img/sheldon_dance.gif';
-import handle from '../../img/squeex_handle.png';
 
 
 
