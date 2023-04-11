@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 /* Bootstrap Objs */
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 /* Cusom Objs */
 import TopNav from './TopNav';
@@ -13,7 +10,6 @@ import Header from './Header';
 import Footer from './Footer';
 
 /* Assets */
-import squeexsturdy from '../img/squeexsturdy.gif';
 import america from '../sounds/us_anthem.mp3';
 import smb from '../sounds/smbros.mp3';
 
