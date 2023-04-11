@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -33,7 +33,7 @@ const FAQs = () => {
 										src={oldsqueex}
 									/>
 									<Figure.Caption className="img_caption">
-										[Jan 2023] Squeex playing Among Us
+										Jan. 2023 - Squeex playing Among Us
 									</Figure.Caption>
 								</Figure>
 							</Col>
@@ -66,8 +66,8 @@ const FAQs = () => {
 								</Figure>
 							</Col>
 							<Col>
-								<p>Unfortunately, hog has never been revealed despite numerous promises from Squeex.</p>
-								<p>Thanks to efforts from discord scientists and their moms, we suspect it to be extremely large, 
+								<p>Hog has never been revealed despite numerous promises from Squeex.</p>
+								<p>Thanks to efforts from discord scientists and chat moms, we suspect it to be extremely large, 
 								between 9-11 inches and a 2.6 inch diameter.</p>
 							</Col>
 						</Row>
@@ -93,7 +93,7 @@ const FAQs = () => {
 								</Figure>
 							</Col>
 							<Col>
-								<p>Despite his chipmunk-like appearance, Squeex is extremely toxic and especially despises his older chatters. 
+								<p>Despite his chipmunk-like appearance, Squeex is extremely toxic to his chat and especially despises older chatters. 
 								The longer you remain a subscriber the lower the chance he will actually read any of your chat messages.</p>
 
 								<p>To ensure the best chance of getting your chat message read make sure to <b>never subscribe</b> to his channel and
